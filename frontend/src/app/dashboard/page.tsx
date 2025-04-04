@@ -1,4 +1,7 @@
+import { Button } from "@/components/ui/button";
 import SelectLocation from "@/components/ui/selects/SelectLocation";
+import { Plus } from "@mynaui/icons-react";
+import Link from "next/link";
 
 const locations = [
   "Minha localização",
@@ -33,12 +36,13 @@ export default function MapaPulverizacoes() {
       {/* Conteúdo Principal */}
       <div className="w-3/4 p-4">
         <div className="bg-orange-400 p-3 rounded-md flex justify-between items-center text-white">
-          <h2 className="font-bold">Mapa de pulverizações</h2>
+          <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">Mapa de pulverizações</h2>
           <div className="flex space-x-2">
             <SelectLocation locations={locations} />
-            <button className="bg-black text-white p-2 rounded-md">
-              ➕ Nova pulverização
-            </button>
+
+            <Button variant="secondary" className="inline-flex items-center gap-2">
+              <Plus /> Nova pulverização
+            </Button>
           </div>
         </div>
 
