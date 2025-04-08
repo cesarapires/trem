@@ -1,7 +1,4 @@
-import { Button } from "@/components/ui/button";
-import SelectLocation from "@/components/ui/selects/SelectLocation";
 import SideBarOption from "@/components/ui/sidebar/button";
-import { Plus } from "@mynaui/icons-react";
 
 const locations = [
   "Minha localização",
