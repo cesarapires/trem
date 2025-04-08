@@ -1,12 +1,18 @@
 import { Button } from "@/components/ui/button";
 import SelectLocation from "@/components/ui/selects/SelectLocation";
+import SideBarOption from "@/components/ui/sidebar/button";
 import { Plus } from "@mynaui/icons-react";
-import Link from "next/link";
 
 const locations = [
   "Minha localização",
   "Fazenda Sol Nascente",
   "Fazenda Laranjal",
+];
+
+const options = [
+  { name: "🔍 Mapa de pulverizações", link: "/map" },
+  { name: "📅 Calendário de pulverizações", link: "/schedule" },
+  { name: "⚙️ Meus locais", link: "/my-places" },
 ];
 
 export default function MapaPulverizacoes() {
@@ -21,15 +27,7 @@ export default function MapaPulverizacoes() {
           T.R.E.M.
         </div>
         <nav className="mt-4 space-y-2">
-          <button className="flex items-center w-full p-3 bg-gray-200 font-bold rounded-md">
-            🔍 Mapa de pulverizações
-          </button>
-          <button className="flex items-center w-full p-3 rounded-md hover:bg-gray-100">
-            📅 Calendário de pulverizações
-          </button>
-          <button className="flex items-center w-full p-3 rounded-md hover:bg-gray-100">
-            ⚙️ Meus locais
-          </button>
+          <SideBarOption options={options} />
         </nav>
       </div>
 
