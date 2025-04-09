@@ -1,3 +1,4 @@
+import MainContent from "@/components/ui/content/main-content";
 import Header from "@/components/ui/header/hearder";
 import SelectLocation from "@/components/ui/selects/SelectLocation";
 import SidebarContent from "@/components/ui/sidebar/sidebar-content";
@@ -16,7 +17,7 @@ export default function MapaPulverizacoes() {
       {/* Conteúdo Principal */}
       <div className="w-3/4 p-4">
         <Header
-          title="Calendário de pulverizações"
+          title="Calendário de Pulverizações"
           children={
             <>
               <SelectLocation locations={locations} />
@@ -24,14 +25,15 @@ export default function MapaPulverizacoes() {
           }
         />
 
-        {/* Mapa (Substituído por uma imagem) */}
-        <div className="mt-4">
-          <img
-            src="/map-placeholder.jpeg"
-            alt="Mapa temporário"
-            className="w-full h-96 object-cover rounded-md"
-          />
-        </div>
+        <MainContent
+          children={
+            <img
+              src="/map-placeholder.jpeg"
+              alt="Mapa temporário"
+              className="w-full h-96 object-cover rounded-md"
+            />
+          }
+        />
       </div>
     </div>
   );
