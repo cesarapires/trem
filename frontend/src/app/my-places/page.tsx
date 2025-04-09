@@ -1,3 +1,4 @@
+import Header from "@/components/ui/header/hearder";
 import SideBarOption from "@/components/ui/sidebar/button";
 
 const locations = [
@@ -30,9 +31,7 @@ export default function MapaPulverizacoes() {
 
       {/* Conteúdo Principal */}
       <div className="w-3/4 p-4">
-        <div className="h-15 bg-orange-400 px-3 rounded-md flex justify-between items-center text-white">
-          <h2 className="text-xl font-semibold tracking-tight">Meus locais</h2>
-        </div>
+        <Header title="Meus locais" />
 
         {/* Mapa (Substituído por uma imagem) */}
         <div className="mt-4">

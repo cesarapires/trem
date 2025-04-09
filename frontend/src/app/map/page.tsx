@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Header from "@/components/ui/header/hearder";
 import SelectLocation from "@/components/ui/selects/SelectLocation";
 import SideBarOption from "@/components/ui/sidebar/button";
 import { Plus } from "@mynaui/icons-react";
@@ -33,16 +34,20 @@ export default function MapaPulverizacoes() {
 
       {/* Conteúdo Principal */}
       <div className="w-3/4 p-4">
-        <div className="bg-orange-400 p-3 rounded-md flex justify-between items-center text-white">
-          <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">Mapa de pulverizações</h2>
-          <div className="flex space-x-2">
-            <SelectLocation locations={locations} />
-
-            <Button variant="secondary" className="inline-flex items-center gap-2">
-              <Plus /> Nova pulverização
-            </Button>
-          </div>
-        </div>
+        <Header
+          title="Mapa de pulverizações"
+          children={
+            <>
+              <SelectLocation locations={locations} />
+              <Button
+                variant="secondary"
+                className="inline-flex items-center gap-2"
+              >
+                <Plus /> Nova pulverização
+              </Button>
+            </>
+          }
+        />
 
         {/* Mapa (Substituído por uma imagem) */}
         <div className="mt-4">
