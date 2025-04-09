@@ -1,6 +1,5 @@
 "use client";
 
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -11,7 +10,7 @@ interface SideBarOptionProps {
   }[];
 }
 
-const SideBarOption: React.FC<SideBarOptionProps> = ({ options }) => {
+const SidebarOption: React.FC<SideBarOptionProps> = ({ options }) => {
   const pathname = usePathname();
 
   return (
@@ -33,4 +32,4 @@ const SideBarOption: React.FC<SideBarOptionProps> = ({ options }) => {
   }
 };
 
-export default SideBarOption;
+export default SidebarOption;
