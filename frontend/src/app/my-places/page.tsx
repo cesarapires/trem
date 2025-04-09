@@ -1,5 +1,5 @@
 import Header from "@/components/ui/header/hearder";
-import SideBarOption from "@/components/ui/sidebar/button";
+import SideBarOption from "@/components/ui/sidebar/sidebar-button";
 
 const locations = [
   "Minha localização",

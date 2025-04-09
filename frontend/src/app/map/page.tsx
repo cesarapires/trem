@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Header from "@/components/ui/header/hearder";
 import SelectLocation from "@/components/ui/selects/SelectLocation";
-import SideBarOption from "@/components/ui/sidebar/button";
+import SideBarOption from "@/components/ui/sidebar/sidebar-button";
 import { Plus } from "@mynaui/icons-react";
 
 const locations = [
