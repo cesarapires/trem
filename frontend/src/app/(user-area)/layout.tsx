@@ -20,7 +20,7 @@ export default function UserAreaLayout(props: LayoutProps | LayoutPropsExtended)
   return (
     <div className="bg-green-100 min-h-screen flex">
       <SidebarContent />
-      <div className="w-3/4 p-4">
+      <div className="w-3/4 p-4 flex flex-col gap-4">
         {header}
         <MainContent>{children}</MainContent>
       </div>
