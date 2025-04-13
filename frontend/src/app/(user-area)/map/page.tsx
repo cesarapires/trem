@@ -6,6 +6,8 @@ export default function MapaPulverizacoes() {
       src="/map-placeholder.jpeg"
       alt="Mapa temporário"
       className="w-full h-96 object-cover rounded-md"
+      width={800}
+      height={400}
     />
   );
 }
