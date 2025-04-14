@@ -5,7 +5,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title, children }) => {
   return (
-    <div className="h-15 bg-orange-400 px-3 rounded-md flex justify-between items-center text-white">
+    <div className="h-16 bg-orange-400 px-3 rounded-md flex justify-between items-center text-white mb-4">
       <h2 className="text-xl font-semibold tracking-tight">{title}</h2>
       {children && <div className="flex space-x-2">{children}</div>}
     </div>
