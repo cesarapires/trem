@@ -9,9 +9,11 @@ type LayoutProps = {
 type LayoutPropsExtended = {
   children?: ReactNode;
   header?: ReactNode;
-}
+};
 
-export default function UserAreaLayout(props: LayoutProps | LayoutPropsExtended) {
+export default function UserAreaLayout(
+  props: LayoutProps | LayoutPropsExtended
+) {
   const { children, header } = {
     ...props,
     header: undefined,
@@ -20,11 +22,10 @@ export default function UserAreaLayout(props: LayoutProps | LayoutPropsExtended)
   return (
     <div className="bg-green-100 min-h-screen flex">
       <SidebarContent />
-      <div className="w-3/4 p-4 flex flex-col gap-4">
+      <div className="w-3/4 p-4 flex flex-col gap-6">
         {header}
         <MainContent>{children}</MainContent>
       </div>
     </div>
   );
 }
-
