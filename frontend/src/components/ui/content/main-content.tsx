@@ -3,11 +3,7 @@ interface MainContentProps {
 }
 
 const MainContent: React.FC<MainContentProps> = ({ children }) => {
-  return (
-    <div className="mt-4">
-      {children}
-    </div>
-  );
+  return <div>{children}</div>;
 };
 
 export default MainContent;
