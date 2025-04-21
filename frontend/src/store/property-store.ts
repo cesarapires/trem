@@ -2,9 +2,9 @@ import { create } from "zustand";
 
 type PropertyStore = {
   property: string | null;
-  coordinates: [number, number] | null;
+  coordinates: [Number, Number] | null;
   setProperty: (value: string) => void;
-  setCoordinates: (value: [number, number]) => void;
+  setCoordinates: (value: [Number, Number]) => void;
 };
 
 export const usePropertyStore = create<PropertyStore>((set) => ({
