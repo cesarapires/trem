@@ -1,21 +1,18 @@
-import { Button } from "@/components/ui/button";
 import Header from "@/components/ui/header/hearder";
+import NewPulverizationPopover from "@/components/ui/popovers/NewPulverizationPopover";
 import SelectLocation from "@/components/ui/selects/SelectLocation";
-import { Plus } from "@mynaui/icons-react";
 
 const locations = [
-  "Minha localização",
-  "Fazenda Sol Nascente",
-  "Fazenda Laranjal",
+  { id: "1", name: "Minha localização" },
+  { id: "2", name: "Fazenda Sol Nascente" },
+  { id: "3", name: "Fazenda Laranjal" },
 ];
 
 export default function MapHeader() {
   return (
     <Header title="Mapa de Pulverizações">
       <SelectLocation locations={locations} />
-      <Button variant="secondary" className="inline-flex items-center gap-2">
-        <Plus /> Nova pulverização
-      </Button>
+      <NewPulverizationPopover />
     </Header>
   );
 }
