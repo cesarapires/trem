@@ -13,7 +13,7 @@ interface SelectLocationProps {
   locations: {
     id: string;
     name: string;
-    coordinates: { latitude: Number; longitude: Number };
+    coordinates: { latitude: number; longitude: number };
   }[];
 }
 
