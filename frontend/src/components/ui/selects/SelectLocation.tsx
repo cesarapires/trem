@@ -8,6 +8,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { usePropertyStore } from "@/store/property-store";
+import { useEffect, useState } from "react";
+import { useStore } from "zustand";
 
 interface SelectLocationProps {
   locations: {
@@ -19,6 +21,19 @@ interface SelectLocationProps {
 
 const SelectLocation: React.FC<SelectLocationProps> = ({ locations }) => {
   const { setProperty, setCoordinates } = usePropertyStore();
+  const [locationSelected, setLocationSelected] = useState<string>("");
+
+  useEffect(() => {
+    if (locations.length > 0) {
+      const firstLocation = locations[0];
+      setProperty(firstLocation.id);
+      setLocationSelected(firstLocation.id);
+      setCoordinates([
+        firstLocation.coordinates.latitude,
+        firstLocation.coordinates.longitude,
+      ]);
+    }
+  }, [locations, setProperty, setCoordinates]);
 
   const handleChange = (value: string) => {
     const selectedLocation = locations.find((location) => location.id === value);
@@ -28,12 +43,13 @@ const SelectLocation: React.FC<SelectLocationProps> = ({ locations }) => {
 
     if (selectedLocation) {
       setProperty(selectedLocation.id);
+      setLocationSelected(selectedLocation.id);
       setCoordinates([latitude, longitude]);
     }
   };
 
   return (
-    <Select onValueChange={handleChange}>
+    <Select value={locationSelected} onValueChange={handleChange}>
       <SelectTrigger className="w-full sm:w-[180px] md:w-[300px] lg:w-[350px] bg-white text-black border border-gray-300">
         <SelectValue placeholder={"Escolha uma localização"} />
       </SelectTrigger>
