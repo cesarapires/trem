@@ -1,16 +1,12 @@
+"use client";
+
 import Header from "@/components/ui/header/hearder";
 import NewPulverizationPopover from "@/components/ui/popovers/NewPulverizationPopover";
 import SelectLocation from "@/components/ui/selects/SelectLocation";
+import { useGeolocationStore } from "@/store/geolocation-store";
+import { useEffect, useMemo } from "react";
 
-const locations = [
-  {
-    id: "399821bb-1db2-40ac-9705-7507681d47dc",
-    name: "Minha localização",
-    coordinates: {
-      latitude: -20.899349709981426,
-      longitude: -46.99061049779196,
-    },
-  },
+const staticLocations = [
   {
     id: "b8389d16-3e43-4207-a02f-45f821b39042",
     name: "Fazenda Sol Nascente",
@@ -30,9 +26,31 @@ const locations = [
 ];
 
 export default function MapHeader() {
+  const { coordinates, fetchPosition } = useGeolocationStore();
+
+  useEffect(() => {
+    fetchPosition();
+  }, [fetchPosition]);
+
+  const allLocations = useMemo(() => {
+    if (!coordinates) return staticLocations;
+
+    return [
+      {
+        id: "399821bb-1db2-40ac-9705-7507681d47dc",
+        name: "Minha localização",
+        coordinates: {
+          latitude: coordinates.latitude,
+          longitude: coordinates.longitude,
+        },
+      },
+      ...staticLocations,
+    ];
+  }, [coordinates]);
+
   return (
     <Header title="Mapa de Pulverizações">
-      <SelectLocation locations={locations} />
+      <SelectLocation locations={allLocations} />
       <NewPulverizationPopover />
     </Header>
   );
