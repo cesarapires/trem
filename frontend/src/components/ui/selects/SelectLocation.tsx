@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/select";
 import { usePropertyStore } from "@/store/property-store";
 import { useEffect, useState } from "react";
-import { useStore } from "zustand";
 
 interface SelectLocationProps {
   locations: {
