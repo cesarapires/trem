@@ -8,7 +8,7 @@ const options = [
 
 const SidebarContent: React.FC = () => {
   return (
-    <div className="w-1/4 bg-white shadow-md p-4">
+    <div className="hidden md:block w-1/4 bg-white shadow-md p-4">
       <div className="bg-orange-400 text-white font-bold text-lg p-3 rounded-md flex items-center">
         <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center mr-2 text-lg">
           T
