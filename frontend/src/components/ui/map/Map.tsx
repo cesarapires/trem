@@ -6,7 +6,7 @@ export default function Map() {
   const { coordinates } = usePropertyStore();
 
   return (
-    <div className="relative h-[500px] w-full z-0">
+    <div className="relative h-[calc(100vh-theme(spacing.32))]">
       <MapContainer
         center={coordinates ?? [0, 0]}
         zoom={13}
