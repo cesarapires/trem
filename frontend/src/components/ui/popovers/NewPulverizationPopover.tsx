@@ -14,8 +14,9 @@ const NewPulverizationPopover: React.FC = () => {
     <Popover>
       <PopoverTrigger asChild>
         <Button variant="secondary" className="cursor-pointer">
-          <Plus /> Nova pulverização
-        </Button>
+          <Plus />
+          <span className="hidden sm:inline ml-2">Nova pulverização</span>
+          </Button>
       </PopoverTrigger>
       <PopoverContent className="w-80">
         <CalendarForm />
