@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: trem-auth
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: trem-app
+            client-secret: pN672rJ3R8oxoRSFJQqmYAOsBY9n4vCg
+            scope:
+              - openid
+              - profile
+              - email
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/trem
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/trem
+
+server:
+  port: 8001
