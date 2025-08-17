@@ -17,6 +17,8 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    volumes:
+      - ./keycloak:/opt/keycloak/themes/trem-login
   
   db:
     image: mysql:8.0.30-debian

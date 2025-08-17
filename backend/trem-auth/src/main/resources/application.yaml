@@ -7,7 +7,7 @@ spring:
         registration:
           keycloak:
             client-id: trem-app
-            client-secret: pN672rJ3R8oxoRSFJQqmYAOsBY9n4vCg
+            client-secret: MvPVlMgp5JiHsAbGP327rVtuKeAeVNBG
             scope:
               - openid
               - profile
