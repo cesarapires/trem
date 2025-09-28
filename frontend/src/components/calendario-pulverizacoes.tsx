@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, Droplets, Leaf, Bug, Zap } from "lucide-reac
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import PulverizacaoBadge from "./ui/calendar/PulverizacaoBadge"
 
 const meses = [
   "Janeiro",
@@ -150,24 +151,7 @@ export function CalendarioPulverizacoes() {
                         {diaInfo.dia}
                       </span>
 
-                      {pulverizacao && (
-                        <div className="flex-1 flex flex-col justify-center">
-                          <Badge
-                            variant="secondary"
-                            className={`
-                              ${obterCorIndicador(pulverizacao.tipo)}
-                              text-xs px-1.5 py-0.5 rounded-sm flex items-center gap-1
-                              shadow-sm border-0
-                            `}
-                          >
-                            {obterIconeProduto(pulverizacao.produto)}
-                            <span className="truncate text-xs">{pulverizacao.produto}</span>
-                          </Badge>
-                          <div className="text-xs text-muted-foreground mt-0.5">
-                            <div>{pulverizacao.horario}</div>
-                          </div>
-                        </div>
-                      )}
+                      {pulverizacao && (<PulverizacaoBadge pulverizacao={pulverizacao} /> )}
                     </div>
                   </div>
                 )
