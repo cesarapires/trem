@@ -86,7 +86,7 @@ export function CalendarioPulverizacoes() {
               variant="ghost"
               size="sm"
               onClick={() => navegarMes("anterior")}
-              className="hover:bg-primary/10"
+              className="hover:bg-primary/10 cursor-pointer"
             >
               <ChevronLeft className="h-3 w-3" />
             </Button>
@@ -100,7 +100,7 @@ export function CalendarioPulverizacoes() {
               variant="ghost"
               size="sm"
               onClick={() => navegarMes("proximo")}
-              className="hover:bg-primary/10"
+              className="hover:bg-primary/10 cursor-pointer"
             >
               <ChevronRight className="h-3 w-3" />
             </Button>
