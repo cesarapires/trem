@@ -3,7 +3,7 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Bug, Droplet, Leaf, Zap } from "lucide-react";
 
-interface PulverizacaoBadgeProps {
+export interface PulverizacaoBadgeProps {
   pulverizacao: {
     tipo: string;
     produto: string;
