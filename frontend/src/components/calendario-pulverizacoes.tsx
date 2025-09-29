@@ -4,7 +4,8 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import DiaCalendario from "./ui/calendar/DiaCalendario";
+import DiasSemanaHeader from "@/components/ui/calendar/DiasSemanaHeader";
+import DiasCalendario from "@/components/ui/calendar/DiasCalendario";
 
 const meses = [
   "Janeiro",
@@ -20,8 +21,6 @@ const meses = [
   "Novembro",
   "Dezembro",
 ];
-
-const diasSemana = ["DOM", "SEG", "TER", "QUA", "QUI", "SEX", "SAB"];
 
 const pulverizacoes = {
   1: { tipo: "programada", produto: "Herbicida", horario: "06:00" },
@@ -107,32 +106,8 @@ export function CalendarioPulverizacoes() {
           </div>
 
           <div className="rounded-lg border border-border overflow-hidden">
-            <div className="grid grid-cols-7 bg-muted/50">
-              {diasSemana.map((dia) => (
-                <div
-                  key={dia}
-                  className="p-2 text-center text-xs font-semibold text-muted-foreground border-r border-border last:border-r-0"
-                >
-                  {dia}
-                </div>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-7">
-              {dias.map((diaInfo, index) => {
-                const pulverizacao = diaInfo.mesAtual
-                  ? pulverizacoes[diaInfo.dia as keyof typeof pulverizacoes]
-                  : null;
-
-                return (
-                  <DiaCalendario
-                    key={index}
-                    diaInfo={diaInfo}
-                    pulverizacao={pulverizacao}
-                  />
-                );
-              })}
-            </div>
+            <DiasSemanaHeader />
+            <DiasCalendario dias={dias} pulverizacoes={pulverizacoes} />
           </div>
         </CardContent>
       </Card>
