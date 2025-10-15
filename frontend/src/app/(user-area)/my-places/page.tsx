@@ -1,15 +1,15 @@
-'use client'
+"use client";
 
-import Image from "next/image";
+import dynamic from "next/dynamic"
+
+import "leaflet/dist/leaflet.css";
+
+const MapLayout = dynamic(() => import("@/components/ui/map/Map"), { ssr:false })
 
 export default function MapaPulverizacoes() {
   return (
-    <Image
-      src="/map-placeholder.jpeg"
-      alt="Mapa temporário"
-      className="w-full h-96 object-cover rounded-md"
-      width={800}
-      height={400}
-    />
+    <div className="relative h-[calc(100vh-theme(spacing.32))] z-0">
+      <MapLayout />
+    </div>
   );
 }
