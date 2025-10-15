@@ -31,8 +31,8 @@ const pulverizacoes = {
 };
 
 export function CalendarioPulverizacoes() {
-  const [mesAtual, setMesAtual] = useState(6); // Julho (índice 6)
-  const [anoAtual, setAnoAtual] = useState(2024);
+  const [mesAtual, setMesAtual] = useState(9); // Julho (índice 6)
+  const [anoAtual, setAnoAtual] = useState(2025);
 
   const obterDiasDoMes = (mes: number, ano: number) => {
     const primeiroDia = new Date(ano, mes, 1);
