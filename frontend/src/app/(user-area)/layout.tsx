@@ -20,7 +20,7 @@ export default function UserAreaLayout(
   };
 
   return (
-    <div className="bg-green-100 min-h-screen flex flex-col md:flex-row">
+    <div className="min-h-screen flex flex-col md:flex-row">
       <SidebarContent />
       <div className="w-full md:w-3/4 p-4 flex flex-col gap-6">
         {header}
