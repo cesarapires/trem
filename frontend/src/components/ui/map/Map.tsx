@@ -1,6 +1,7 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { CenterMap } from "./CenterMap";
 import { usePropertyStore } from "@/store/property-store";
+import TractorIcon from "./TractorIcon";
 
 export default function Map() {
   const { coordinates } = usePropertyStore();
@@ -19,7 +20,7 @@ export default function Map() {
         />
         {coordinates && (
           <>
-            <Marker position={coordinates}>
+            <Marker position={coordinates} icon={TractorIcon}>
               <Popup>Local selecionado</Popup>
             </Marker>
             <CenterMap coordinates={coordinates} />

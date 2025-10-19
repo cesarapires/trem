@@ -50,7 +50,7 @@ const SelectLocation: React.FC<SelectLocationProps> = ({ locations }) => {
 
   return (
     <Select value={locationSelected} onValueChange={handleChange}>
-      <SelectTrigger className="w-full sm:w-[180px] md:w-[300px] lg:w-[350px] bg-white text-black border border-gray-300">
+      <SelectTrigger className="w-full sm:w-[180px] md:w-[300px] lg:w-[250px] bg-white text-black border border-gray-300">
         <MapPin className="mr-2 h-4 w-4" />
         <SelectValue placeholder={"Escolha uma localização"} />
       </SelectTrigger>
