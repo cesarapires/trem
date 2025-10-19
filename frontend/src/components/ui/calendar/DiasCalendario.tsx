@@ -5,7 +5,13 @@ interface DiasCalendarioProps {
     dia: number;
     mesAtual: boolean;
   }[];
-  pulverizacoes: Record<number, any>;
+  pulverizacoes: Record<number, Pulverizacao>;
+}
+
+interface Pulverizacao {
+  tipo: string;
+  produto: string;
+  horario: string;
 }
 
 const DiasCalendario: React.FC<DiasCalendarioProps> = ({ dias, pulverizacoes }) => {
