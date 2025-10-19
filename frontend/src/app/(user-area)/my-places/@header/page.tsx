@@ -1,7 +1,6 @@
 "use client";
 
 import Header from "@/components/ui/header/hearder";
-import NewPulverizationPopover from "@/components/ui/popovers/NewPulverizationPopover";
 import SelectLocation from "@/components/ui/selects/SelectLocation";
 import { useGeolocationStore } from "@/store/geolocation-store";
 import { useEffect, useMemo } from "react";
