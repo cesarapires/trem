@@ -2,7 +2,6 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { CenterMap } from "./CenterMap";
 import { usePropertyStore } from "@/store/property-store";
 import TractorIcon from "./TractorIcon";
-import { FrameIcon } from "lucide-react";
 import FarmIcon from "./FarmIcon";
 
 export default function Map() {
