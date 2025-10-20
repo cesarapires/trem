@@ -2,7 +2,7 @@ import React from 'react';
 
 import L from 'leaflet';
 import ReactDOMServer from 'react-dom/server';
-import { PiFarm, PiTractorFill } from "react-icons/pi";
+import { PiFarm } from "react-icons/pi";
 
 const FarmIcon: L.DivIcon = new L.DivIcon({
   html: ReactDOMServer.renderToString(
