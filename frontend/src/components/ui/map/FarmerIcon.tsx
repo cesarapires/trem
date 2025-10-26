@@ -21,9 +21,9 @@ const FarmerIcon: L.DivIcon = new L.DivIcon({
       <GiFarmer color="white" size={20} />
     </div>
   ),
-  className: '', // remove a classe padrão do DivIcon
+  className: '',
   iconSize: [40, 40],
-  iconAnchor: [20, 20] // centraliza o ícone no ponto
+  iconAnchor: [20, 20]
 });
 
 export default FarmerIcon;
