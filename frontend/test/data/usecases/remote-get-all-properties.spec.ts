@@ -26,6 +26,7 @@ const makeSut = (url: string = faker.internet.url()): SutTypes => {
 describe('RemoteGetAllProperties', () => {
   test('Should call HttpGetClient with correct URL', async () => {
     const url = faker.internet.url();
+
     const { sut, httpGetClientSpy } = makeSut(url);
     await sut.getAll();
 
