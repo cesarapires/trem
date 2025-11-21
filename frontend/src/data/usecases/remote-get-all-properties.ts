@@ -17,6 +17,8 @@ export class RemoteGetAllProperties implements GetAllProperties {
 
     switch (httpResponse.statusCode) {
       case HttpStatusCode.ok: return httpResponse.body!
+      case HttpStatusCode.unauthorized: throw new Error("InvalidCredentialsError")
+      case HttpStatusCode.badRequest: throw new Error("BadRequestError")
       default: throw new Error("UnexpectedError")
     }
   }
